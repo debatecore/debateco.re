@@ -12,13 +12,13 @@ export default {
         compsci: `url("/compsci-bg.svg")`,
       },
       animation: {
-        pan: "pan_keyframes 100s linear infinite",
+        pan: "pan_keyframes 20s linear infinite",
         slidein: "slidein_keyframes .5s ease-in-out",
       },
       keyframes: {
         pan_keyframes: {
-          "0%": { "background-position": "0% 0%" },
-          "100%": { "background-position": "0% 100%" },
+          "0%": { "background-position": "0 0" },
+          "100%": { "background-position": "0 256px" },
         },
         slidein_keyframes: {
           "0%": {
