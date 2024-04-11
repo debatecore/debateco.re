@@ -1,17 +1,28 @@
 ---
 import homeicon from '../../public/home.svg?raw';
+import infoicon from '../../public/info.svg?raw';
 import scrolltexticon from '../../public/scroll-text.svg?raw';
+import clipboardcheckicon from '../../public/clipboard-check.svg?raw';
 const links = [
+  // {
+  //   icon: homeicon,
+  //   href: "/"
+  // },
   {
-    name: "Home",
-    icon: homeicon,
-    href: "/"
+    text: "About",
+    icon: infoicon,
+    href: "/about"
   },
-  {
-    name: "Blog",
-    icon: scrolltexticon,
-    href: "/"
-  }
+  // {
+  //   text: "Projects",
+  //   icon: clipboardcheckicon,
+  //   href: "/"
+  // },
+  // {
+  //   text: "Writings",
+  //   icon: scrolltexticon,
+  //   href: "/"
+  // }
 ];
 ---
 
@@ -21,8 +32,9 @@ const links = [
     return (
       <a href={el.href} class="px-8 flex flex-row items-center gap-2 hover:bg-black hover:bg-opacity-50">
         <span class="md:scale-[.75]"><Fragment set:html={el.icon} /></span>
-        <span class="hidden md:block">{el.name}</span>
+        {el.text && <span class="hidden md:block">{el.text}</span>}
       </a>
     )
   })}
 </nav>
+<div class="h-16 block"></div>
