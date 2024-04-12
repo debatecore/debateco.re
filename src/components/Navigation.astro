@@ -1,8 +1,9 @@
 ---
-import homeicon from '../../public/home.svg?raw';
 import infoicon from '../../public/info.svg?raw';
-import scrolltexticon from '../../public/scroll-text.svg?raw';
-import clipboardcheckicon from '../../public/clipboard-check.svg?raw';
+// import homeicon from '../../public/home.svg?raw';
+// import scrolltexticon from '../../public/scroll-text.svg?raw';
+// import clipboardcheckicon from '../../public/clipboard-check.svg?raw';
+
 const links = [
   // {
   //   icon: homeicon,
@@ -26,7 +27,7 @@ const links = [
 ];
 ---
 
-<nav id="navi" class="font-lexend fixed h-16 w-full flex flex-row bg-white bg-opacity-[.02] border-b border-neutral-800 backdrop-blur">
+<nav id="navi" class="font-lexend fixed z-[1000] h-16 w-full flex flex-row bg-white bg-opacity-[.02] border-b border-neutral-800 backdrop-blur">
   <a href="/" class="mr-auto px-8 flex flex-row items-center hover:bg-black hover:bg-opacity-50">{"debatecore"}</a>
   {links.map(el => {
     return (
