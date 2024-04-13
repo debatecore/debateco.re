@@ -6,10 +6,10 @@ import img_mdobrzynski from '../../public/mdobrzynski.jpeg';
 ---
 <General title="About" description="About us">
 <div class="p-4 grid sm:grid-cols-3 lg:grid-cols-4 max-w-7xl gap-8 mt-8 lg:mt-24 mx-auto">
-  <section class="p-4 sm:p-8 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur sm:col-span-3 lg:row-span-2">
+  <section class="p-4 sm:p-8 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur sm:col-span-3 lg:row-span-2">
     <h1 class="font-lexend text-3xl mb-4">
       {"What is"}
-      <span class="bg-clip-text text-transparent bg-gradient-to-r from-30% to-70% from-violet-600 to-pink-400">{"Debatecore"}</span>{"?"}
+      <span class="bg-clip-text font-bold tracking-wide text-transparent bg-gradient-to-r from-30% to-70% from-violet-600 to-pink-400">{"debatecore"}</span>{"?"}
     </h1>
     <p class="text-justify mb-4">
       We are debaters from Poznań, Poland. Our goal is to popularize the Oxford debate format and make it easier
@@ -20,37 +20,38 @@ import img_mdobrzynski from '../../public/mdobrzynski.jpeg';
       the debate&nbsp;tools project as well as an intro to debating and quality tutorial pieces on how to debate.
     </p>
   </section>
-  <section class="p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur">
-    <Image src={img_jmanczak} alt={"Jakub Mańczak"} class="rounded-full w-32 h-32 mb-4 mx-auto" />
-    <h2 class="font-lexend text-xl">Jakub Mańczak</h2>
-    <p class="font-lexend text-neutral-500 mb-3">Co-Founder</p>
-  </section>
+  <a href="https://manczak.net">
+    <section class="p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] hover:bg-opacity-[.05] backdrop-blur">
+      <Image src={img_jmanczak} alt={"Jakub Mańczak"} class="rounded-full w-32 h-32 mb-4 mx-auto" />
+      <h2 class="font-lexend text-xl">Jakub Mańczak</h2>
+      <p class="font-lexend text-neutral-500 mb-3">Co-Founder</p>
+    </section>
+  </a>
   <section class="p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur">
     <Image src={img_mdobrzynski} alt={"Mateusz Dobrzyński"} class="rounded-full w-32 h-32 mb-4 mx-auto" />
     <h2 class="font-lexend text-xl">Mateusz Dobrzyński</h2>
     <p class="font-lexend text-neutral-500 mb-3">Co-Founder</p>
   </section>
   <a href="https://tools.debateco.re">
-    <section class="relative p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur">
+    <section class="relative p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] hover:bg-opacity-[.05] backdrop-blur">
       <h1 class="font-lexend text-right">DEBATE TOOLS</h1>
-      <p class="text-right text-neutral-500">Hyperlink.</p>
-      <p class="text-neutral-500 absolute bottom-4 left-4">{":)"}</p>
+      <p class="text-right text-neutral-500">Available now.</p>
     </section>
   </a>
   <section class="relative p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur">
     <h1 class="font-lexend text-right">JOURNALISM</h1>
     <p class="text-right text-neutral-500">Coming soon.</p>
-    <p class="text-neutral-500 absolute bottom-4 left-4">{":)"}</p>
+    <p class="text-neutral-800 absolute bottom-4 left-4">{":)"}</p>
   </section>
   <section class="relative p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur">
     <h1 class="font-lexend text-right">DOWNLOADABLES</h1>
     <p class="text-right text-neutral-500">Coming soon.</p>
-    <p class="text-neutral-500 absolute bottom-4 left-4">{":)"}</p>
+    <p class="text-neutral-800 absolute bottom-4 left-4">{":)"}</p>
   </section>
   <section class="relative p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur">
     <h1 class="font-lexend text-right">JOIN US</h1>
     <p class="text-right text-neutral-500">Get in touch.</p>
-    <p class="text-neutral-500 absolute bottom-4 left-4">{":)"}</p>
+    <p class="text-neutral-800 absolute bottom-4 left-4">{":)"}</p>
   </section>
 </div>
 </General>
