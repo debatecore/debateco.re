@@ -13,9 +13,7 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description || "Debatecore – Approachable debating."}>
 		<title>{`debatecore: ${title}`}</title>
 	</head>
-	<body class="min-h-screen relative bg-black bg-gradient-to-b from-neutral-950 to-black text-white">
-		<div class="absolute w-full h-screen bg-compsci motion-safe:animate-pan opacity-[.05] -z-10" />
-		<div class="absolute w-full h-screen bg-gradient-to-b from-transparent to-black -z-10" />
+	<body class="min-h-screen relative bg-neutral-950 text-white">
 		<Navigation />
 		<slot />
 	</body>
