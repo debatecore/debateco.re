@@ -1,0 +1,90 @@
+---
+import { getCollection } from "astro:content";
+import General from "../../layouts/General.astro";
+import { MovingCompSciBg } from "../../components/MovingCompSciBg";
+
+export async function getStaticPaths() {
+  const articlesEntries = await getCollection("articles");
+  return articlesEntries.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+const data = article.data;
+
+const sideclasses =
+  "bg-white bg-opacity-[.02] backdrop-blur border border-neutral-800 rounded-2xl flex-1 h-fit p-8";
+---
+
+<MovingCompSciBg height="full" />
+<General title={data.title} description={data.subtitle}>
+  <!-- FRONTMATTER -->
+  <div
+    class="mx-auto max-w-5xl mt-8 p-8 pb-2 rounded-2xl bg-white bg-opacity-[.02] backdrop-blur border border-neutral-800"
+  >
+    <h1 class="font-lexend text-2xl">{data.title}</h1>
+    {data.subtitle && <h2 class="font-lexend text-lg font">{data.subtitle}</h2>}
+
+    <hr class="mt-4 mb-1 border-neutral-700" />
+
+    <div class="flex flex-row justify-between">
+      <p class="font-lexend text-neutral-500">{data.author}</p>
+      {
+        data.publicationDate && (
+          <p class="font-lexend text-neutral-500">
+            {data.publicationDate.toLocaleDateString()}
+          </p>
+        )
+      }
+    </div>
+
+    {data.description && <p class="mt-4 text-justify">{data.description}</p>}
+
+    <p class="mt-4 flex flex-row gap-4 text-neutral-600 justify-center">
+      <span>{data.editor && `Editor: ${data.editor}`}</span>
+      <span>
+        {data.consultingEditor && `Consulting editor: ${data.consultingEditor}`}
+      </span>
+    </p>
+  </div>
+
+  <!-- ARTICLE -->
+
+  <div class="mx-auto max-w-5xl mt-8 flex flex-row gap-8">
+    <!-- article content -->
+    <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-8">
+      <div
+        class="prose prose-neutral prose-invert prose-p:text-justify prose-li:text-justify prose-a:ml-[2px]"
+      >
+        <Content />
+      </div>
+    </div>
+    <!-- side panels -->
+    <div class="flex-1 h-fit flex flex-col gap-8">
+      <div
+        class="bg-white bg-opacity-[.02] backdrop-blur border border-neutral-800 rounded-2xl p-8"
+      >
+        <h1 class="text-center font-lexend text-lg">Table of contents</h1>
+      </div>
+
+      <div
+        class="bg-white bg-opacity-[.02] backdrop-blur border border-neutral-800 rounded-2xl p-8"
+      >
+        <h1 class="text-center font-lexend text-lg">Author</h1>
+      </div>
+    </div>
+    <!--
+    TABLE OF CONTENTS
+    <div class={sideclasses}>
+      <h1 class="text-center font-lexend text-lg">Table of Contents</h1>
+    </div>
+    Author 
+    <div class={sideclasses}>
+      <h1 class="text-center font-lexend text-lg">Author</h1>
+
+    </div> -->
+  </div>
+</General>

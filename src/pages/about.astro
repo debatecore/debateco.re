@@ -1,38 +1,60 @@
 ---
-import Image from 'astro/components/Image.astro';
-import General from '../layouts/General.astro';
-import img_jmanczak from '../assets/jmanczak.jpeg';
-import img_mdobrzynski from '../assets/mdobrzynski.jpeg';
-import { MovingCompSciBg } from '../components/MovingCompSciBg.tsx';
+import Image from "astro/components/Image.astro";
+import General from "../layouts/General.astro";
+import img_jmanczak from "../assets/jmanczak.jpeg";
+import img_mdobrzynski from "../assets/mdobrzynski.jpeg";
+import { MovingCompSciBg } from "../components/MovingCompSciBg.tsx";
 ---
+
 <MovingCompSciBg height="full" />
 <General title="About" description="About us">
-<div class="p-4 grid sm:grid-cols-2 lg:grid-cols-4 max-w-7xl gap-8 mt-8 lg:mt-24 mx-auto">
-  <section class="p-4 sm:p-8 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur sm:col-span-2 lg:col-span-3 lg:row-span-2">
-    <h1 class="font-lexend text-3xl mb-4">
-      {"What is"}
-      <span class="bg-clip-text font-bold tracking-wide text-transparent bg-gradient-to-r from-30% to-70% from-violet-600 to-pink-400">{"debatecore"}</span>{"?"}
-    </h1>
-    <p class="text-justify mb-4">
-      We are debaters from Poznań, Poland. Our goal is to popularize the Oxford debate format and make it easier
-      to enter the world of debating by providing IT-centric solutions, journalism, and social impact.
-    </p>
-    <p class="text-justify mb-4">
-      We offer battle-tested tools for debate conduction and a&nbsp;database of filtered motions via
-      the debate&nbsp;tools project, as well as an introduction to debating and quality tutorials on how to debate.
-    </p>
-  </section>
-  <a href="https://manczak.net">
-    <section class="p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] hover:bg-opacity-[.05] backdrop-blur">
-      <Image src={img_jmanczak} alt={"Jakub Mańczak"} class="rounded-full w-32 h-32 mb-4 mx-auto" />
-      <h2 class="font-lexend text-xl">Jakub Mańczak</h2>
+  <div
+    class="p-4 grid sm:grid-cols-2 lg:grid-cols-4 max-w-7xl gap-8 mt-8 lg:mt-24 mx-auto"
+  >
+    <section
+      class="p-4 sm:p-8 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur sm:col-span-2 lg:col-span-3 lg:row-span-2"
+    >
+      <h1 class="font-lexend text-3xl mb-4">
+        {"What is"}
+        <span
+          class="bg-clip-text font-bold tracking-wide text-transparent bg-gradient-to-r from-30% to-70% from-violet-600 to-pink-400"
+          >{"debatecore"}</span
+        >{"?"}
+      </h1>
+      <p class="text-justify mb-4">
+        We are debaters from Poznań, Poland. Our goal is to popularize the
+        Oxford debate format and make it easier to enter the world of debating
+        by providing IT-centric solutions, journalism, and social impact.
+      </p>
+      <p class="text-justify mb-4">
+        We offer battle-tested tools for debate conduction and a&nbsp;database
+        of filtered motions via the debate&nbsp;tools project, as well as an
+        introduction to debating and quality tutorials on how to debate.
+      </p>
+    </section>
+    <a href="https://manczak.net">
+      <section
+        class="p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] hover:bg-opacity-[.05] backdrop-blur"
+      >
+        <Image
+          src={img_jmanczak}
+          alt={"Jakub Mańczak"}
+          class="rounded-full w-32 h-32 mb-4 mx-auto"
+        />
+        <h2 class="font-lexend text-xl">Jakub Mańczak</h2>
+        <p class="font-lexend text-neutral-500 mb-3">Co-Founder</p>
+      </section>
+    </a>
+    <section
+      class="p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur"
+    >
+      <Image
+        src={img_mdobrzynski}
+        alt={"Mateusz Dobrzyński"}
+        class="rounded-full w-32 h-32 mb-4 mx-auto"
+      />
+      <h2 class="font-lexend text-xl">Mateusz Dobrzyński</h2>
       <p class="font-lexend text-neutral-500 mb-3">Co-Founder</p>
     </section>
-  </a>
-  <section class="p-4 min-h-64 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur">
-    <Image src={img_mdobrzynski} alt={"Mateusz Dobrzyński"} class="rounded-full w-32 h-32 mb-4 mx-auto" />
-    <h2 class="font-lexend text-xl">Mateusz Dobrzyński</h2>
-    <p class="font-lexend text-neutral-500 mb-3">Co-Founder</p>
-  </section>
-</div>
+  </div>
 </General>
