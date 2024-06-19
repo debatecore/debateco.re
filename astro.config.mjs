@@ -6,4 +6,8 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react(), mdx()],
+    markdown: {
+    // Example: Translate the footnotes text to another language, here are the default English values
+    remarkRehype: { footnoteLabel: "Bibliografia"},
+  },
 });
