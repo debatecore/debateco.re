@@ -23,33 +23,35 @@ const articles = await getCollection("articles");
 
     <section class="flex flex-col gap-4">
       {
-        articles.map((article) => {
-          return (
-            <a href={`read/${article.slug}`} class="flex flex-row">
-              <article class="w-full p-4 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur">
-                <div class="flex flex-row justify-between">
-                  <h2 class="font-lexend text-xl flex flex-row gap-2">
-                    <div class="bg-neutral-600 w-1 rounded-full" />
-                    {article.data.title}
-                  </h2>
-                  <p class="font-lexend text-neutral-500">
-                    {article.data.author}
-                  </p>
-                </div>
-                <div class="flex flex-row justify-between">
-                  <p class="font-lexend text-neutral-500 mt-1">
-                    {article.data.subtitle || ""}
-                  </p>
-                  {article.data.publicationDate && (
-                    <p class="font-lexend text-neutral-500 mt-1">
-                      {article.data.publicationDate.toLocaleDateString()}
+        articles
+          .filter((article) => !article.data.ignore)
+          .map((article) => {
+            return (
+              <a href={`read/${article.slug}`} class="flex flex-row">
+                <article class="w-full p-4 rounded-lg border border-neutral-800 bg-white bg-opacity-[.02] backdrop-blur">
+                  <div class="flex flex-row justify-between">
+                    <h2 class="font-lexend text-xl flex flex-row gap-2">
+                      <div class="bg-neutral-600 w-1 rounded-full" />
+                      {article.data.title}
+                    </h2>
+                    <p class="font-lexend text-neutral-500">
+                      {article.data.author}
                     </p>
-                  )}
-                </div>
-              </article>
-            </a>
-          );
-        })
+                  </div>
+                  <div class="flex flex-row justify-between">
+                    <p class="font-lexend text-neutral-500 mt-1">
+                      {article.data.subtitle || ""}
+                    </p>
+                    {article.data.publicationDate && (
+                      <p class="font-lexend text-neutral-500 mt-1">
+                        {article.data.publicationDate.toLocaleDateString()}
+                      </p>
+                    )}
+                  </div>
+                </article>
+              </a>
+            );
+          })
       }
     </section>
   </div>
