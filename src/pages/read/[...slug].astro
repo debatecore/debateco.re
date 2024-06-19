@@ -2,10 +2,6 @@
 import { getCollection } from "astro:content";
 import General from "../../layouts/General.astro";
 import { MovingCompSciBg } from "../../components/MovingCompSciBg";
-// import img_jmanczak from "../../assets/jmanczak.jpeg";
-// import img_mdobrzynski from "../../assets/mdobrzynski.jpeg";
-// import { Image } from "astro:assets";
-// import { getEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const articlesEntries = await getCollection("articles");
@@ -56,7 +52,9 @@ const data = article.data;
 
   <div class="mx-auto max-w-5xl mt-8 pb-8 flex flex-row gap-8">
     <!-- article content -->
-    <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-8">
+    <div
+      class="bg-neutral-950 border border-neutral-800 rounded-2xl p-8 mx-auto"
+    >
       <div
         class="prose prose-neutral prose-invert prose-p:text-justify prose-li:text-justify prose-a:ml-[2px]"
       >
@@ -64,28 +62,12 @@ const data = article.data;
       </div>
     </div>
     <!-- side panels -->
-    <div class="flex-1 flex flex-col gap-8">
+    <!-- <div class="flex-1 flex flex-col gap-8">
       <div
         class="bg-white bg-opacity-[.02] backdrop-blur border border-neutral-800 rounded-2xl p-8"
       >
         <h1 class="text-center font-lexend text-lg">Table of contents</h1>
       </div>
-
-      <!-- <div
-        class="bg-white bg-opacity-[.02] backdrop-blur border border-neutral-800 rounded-2xl p-8"
-      >
-        <h1 class="text-center font-lexend text-neutral-500">Article author</h1>
-        <Image
-          src={data.author === "Mateusz Dobrzyński"
-            ? img_mdobrzynski
-            : img_jmanczak}
-          alt={data.author}
-          class="mt-4 w-32 rounded-full mx-auto"
-        />
-        <p class="font-lexend text-lg text-center mt-4">
-          {data.author}
-        </p>
-      </div> -->
-    </div>
+    </div> -->
   </div>
 </General>
