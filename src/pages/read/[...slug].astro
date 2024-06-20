@@ -41,9 +41,12 @@ const data = article.data;
     {data.description && <p class="mt-4 text-justify">{data.description}</p>}
 
     <p class="mt-4 flex flex-row gap-4 text-neutral-600">
-      <span>{data.editor && `Editor: ${data.editor}`}</span>
+      <span>{data.editor && `Korekta: ${data.editor}`}</span>
       <span>
-        {data.consultingEditor && `Consulting editor: ${data.consultingEditor}`}
+        {
+          data.consultingEditor &&
+            `Korekta merytoryczna: ${data.consultingEditor}`
+        }
       </span>
     </p>
   </div>
