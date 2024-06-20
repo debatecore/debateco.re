@@ -1,20 +1,23 @@
 ---
-import '@fontsource/lexend';
-import Navigation from '../components/Navigation.astro';
+import "@fontsource/lexend";
+import Navigation from "../components/Navigation.astro";
 
 const { title, description } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description || "Debatecore – Approachable debating."}>
-		<title>{`debatecore: ${title}`}</title>
-	</head>
-	<body class="min-h-screen relative bg-neutral-950 text-white">
-		<Navigation />
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content={description || "Debatecore – Approachable debating."}
+    />
+    <title>{`debatecore: ${title}`}</title>
+  </head>
+  <body class="min-h-screen relative bg-neutral-950 text-white">
+    <Navigation />
+    <slot />
+  </body>
 </html>
