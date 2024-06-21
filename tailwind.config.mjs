@@ -5,6 +5,21 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            blockquote: {
+              'font-style': 'normal',
+            },
+            'blockquote p::before': {
+              content: 'none'
+            },
+            'blockquote p::after': {
+              content: 'none'
+            }
+          }
+        }
+      },
       fontFamily: {
         lexend: ["Lexend", ...defaultTheme.fontFamily.sans],
       },
