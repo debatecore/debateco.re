@@ -16,6 +16,21 @@ export default {
             },
             'blockquote p::after': {
               content: 'none'
+            },
+            ':is(h1, h2, h3, h4, h5, h6)::before': {
+              content: '""',
+              display: 'block',
+              'padding-top':'4em',
+              'margin-top':'-4em'
+            },
+            'a[href^="#user-content-fn-"]': {
+              'padding-top':'100px',
+              'margin-top':'-100px'
+            },
+            'li[id^=user-content-fn]': {
+              'padding-top':'100px',
+              'margin-top':'-100px',
+              'margin-bottom': '0px'
             }
           }
         }
