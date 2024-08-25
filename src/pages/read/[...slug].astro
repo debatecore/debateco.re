@@ -40,15 +40,15 @@ const data = article.data;
 
     {data.description && <p class="mt-4 text-justify">{data.description}</p>}
 
-    <p class="mt-4 flex flex-row gap-4 text-neutral-600">
-      <span>{data.editor && `Korekta: ${data.editor}`}</span>
-      <span>
+    <span class="mt-4 flex flex-col text-neutral-600">
+      <p>{data.editor && `Korekta: ${data.editor}`}</p>
+      <p>
         {
           data.consultingEditor &&
             `Konsultacja merytoryczna: ${data.consultingEditor}`
         }
-      </span>
-    </p>
+      </p>
+    </span>
   </div>
 
   <!-- ARTICLE -->
