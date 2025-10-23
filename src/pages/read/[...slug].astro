@@ -40,7 +40,7 @@ const data = article.data;
 
     {data.description && <p class="mt-4 text-justify">{data.description}</p>}
 
-    <span class="mt-4 flex flex-col text-neutral-600">
+    <div class="mt-4 flex flex-col text-neutral-600">
       <p>{data.editor && `Korekta: ${data.editor}`}</p>
       <p>
         {
@@ -48,7 +48,7 @@ const data = article.data;
             `Konsultacja merytoryczna: ${data.consultingEditor}`
         }
       </p>
-    </span>
+    </div>
   </div>
 
   <!-- ARTICLE -->
@@ -65,13 +65,5 @@ const data = article.data;
         <Content />
       </div>
     </div>
-    <!-- side panels -->
-    <!-- <div class="flex-1 flex flex-col gap-8">
-      <div
-        class="bg-white bg-opacity-[.02] backdrop-blur border border-neutral-800 rounded-2xl p-8"
-      >
-        <h1 class="text-center font-lexend text-lg">Table of contents</h1>
-      </div>
-    </div> -->
   </div>
 </General>
